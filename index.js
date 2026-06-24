@@ -6,7 +6,7 @@ import prodis from "./routes/prodi.routes.js"
 import pinjams from "./routes/pinjam.routes.js"
 import detail_pinjams from "./routes/detail_pinjam.routes.js";
 import cors from "cors";
-
+import user from "./routes/user.routes.js";
 const app=express();
 try {
     await db.authenticate();
@@ -27,5 +27,5 @@ app.use('/api/mahasiswa',mahasiswas);
 app.use('/api/prodi',prodis);
 app.use('/api/pinjam',pinjams);
 app.use('/api/detail_pinjam',detail_pinjams);
-
+app.use('/api/user',user);
 app.listen(5000);
